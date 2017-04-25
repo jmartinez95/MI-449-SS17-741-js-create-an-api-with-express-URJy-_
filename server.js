@@ -28,7 +28,7 @@ app.post('/todos', function (request, response) {
   var id = request.body.name.trim().toLowerCase().split(' ').join('-')
   tasks[id] = {
     name: request.body.name.trim(),
-    price: request.body.done.trim()
+    done: request.body.done.trim()
   }
   response.redirect('/todos/' + id)
 })
